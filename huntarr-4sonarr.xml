@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Huntarr-4Sonarr</Name>
+  <Repository>huntarr/4sonarr</Repository>
+  <Registry>https://hub.docker.com/repository/docker/huntarr/4sonarr</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/plexguide/Huntarr-Sonarr/issues</Support>
+  <Project>https://github.com/plexguide/huntarr-sonarr</Project>
+  <Overview>Huntarr-Sonarr is a specialized companion utility that automates and optimizes the process of discovering missing episodes and quality upgrades in your Sonarr media library by intelligently scheduling searches in controlled batches, maintaining a persistent memory of processed content, respecting indexer rate limits, and continuously running in the background to gradually complete your TV collection with minimal manual intervention.</Overview>
+  <Category>Downloaders: MediaApp:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://private-user-images.githubusercontent.com/24727006/430686543-47ab5a4e-30b4-45bd-9720-8ded19ce5020.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM5MjYxNjcsIm5iZiI6MTc0MzkyNTg2NywicGF0aCI6Ii8yNDcyNzAwNi80MzA2ODY1NDMtNDdhYjVhNGUtMzBiNC00NWJkLTk3MjAtOGRlZDE5Y2U1MDIwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA0MDYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNDA2VDA3NTEwN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTUxZjdiODliMmJmZmNiMDk1MGQzNzZiMjkwNzBjNzEzM2VlYmRlZmM4YTc4MzM2NjI0MTE2M2RlYzc2YzliYzcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-AUSTGerm8fFCd4XKr5NQQyXdPSQRYCmfe7q4fv9jP4</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1743926046</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>A Sonarr Instance</Requires>
+  <Config Name="API_KEY" Target="API_KEY" Default="" Mode="" Description="Your Sonarr API Key." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="API_URL" Target="API_URL" Default="" Mode="" Description="Your Sonarr Address." Type="Variable" Display="always" Required="true" Mask="false">http://your-sonarr-address:8989</Config>
+  <Config Name="API_TIMEOUT" Target="API_TIMEOUT" Default="60" Mode="" Description="Sets the maximum number of seconds to wait for Sonarr API responses before timing out. This is particularly important when working with large libraries or when checking for many quality upgrades." Type="Variable" Display="always" Required="true" Mask="false">60</Config>
+  <Config Name="MONITORED_ONLY" Target="MONITORED_ONLY" Default="true" Mode="" Description="true or false. Setting to true results in only processing monitored shows/episodes, whereas false processes everything." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="HUNT_MISSING_SHOWS" Target="HUNT_MISSING_SHOWS" Default="1" Mode="" Description="Maximum missing shows to process per cycle. Setting to 0 equals to being disabled." Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="HUNT_UPGRADE_EPISODES" Target="HUNT_UPGRADE_EPISODES" Default="0" Mode="" Description="Maximum upgrade episodes to process per cycle. Setting to zero equals being disabled." Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+  <Config Name="SLEEP_DURATION" Target="SLEEP_DURATION" Default="900" Mode="" Description="Seconds to wait after completing a cycle (900 = 15 minutes)." Type="Variable" Display="always" Required="true" Mask="false">900</Config>
+  <Config Name="RANDOM_SELECTION" Target="RANDOM_SELECTION" Default="true" Mode="" Description="Use random selection (true) or sequential (false)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="STATE_RESET_INTERVAL_HOURS" Target="STATE_RESET_INTERVAL_HOURS" Default="168" Mode="" Description="Hours which the processed state files reset (168=1 week, 0=never reset)." Type="Variable" Display="always" Required="true" Mask="false">168</Config>
+  <Config Name="DEBUG_MODE" Target="DEBUG_MODE" Default="false" Mode="" Description="Enable detailed debug logging (true or false)" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <TailscaleStateDir/>
+</Container>
