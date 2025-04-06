@@ -18,8 +18,8 @@
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1743926046</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>Donations Go Towards My Daughters College Fund<DonateText/>
+  <DonateLink>https://donate.plex.one<DonateLink/>
   <Requires>A Sonarr Instance</Requires>
   <Config Name="API_KEY" Target="API_KEY" Default="" Mode="" Description="Your Sonarr API Key." Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="API_URL" Target="API_URL" Default="" Mode="" Description="Your Sonarr Address." Type="Variable" Display="always" Required="true" Mask="false">http://your-sonarr-address:8989</Config>
